@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="author" content="Coderthemes">
+    <!-- App Favicon -->
+    <link rel="shortcut icon" href="https://dashboardlibs.goodera.com/images/goosfngnd.png">
+    <!-- App title -->
+    <title>Cisco</title>
+    <!-- <script type="text/javascript" src="https://l2.io/ip.js?var=myip"></script> -->
+
+    <script type="application/javascript">
+        function getIP(json) {
+            myip = json.ip;
+        }
+    </script>
+
+    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+    <script src="../Uplon-v1.4/cisco-csr/assets/js/google_analytics.js"></script>
+    <!-- Please Wait -->
+    <!--        <script src="../Uplon/emc/js/please-wait.min.js"></script>-->
+    <!--  <script src='//cdn.zarget.com/137536/296896.js'></script>
+   -->
+    <link rel="stylesheet" href="../Uplon/emc/css/please-wait.css">
+    <link rel="stylesheet" href="../Uplon/emc/css/spinkit.css">
+    <!--MiniGallery-->
+    <script src="../Uplon-v1.4/assets/plugins/minigallery/yetii-min.js"></script>
+    <!-- C3 charts css -->
+    <link href="../Uplon-v1.4/assets/plugins/c3/c3.min.css" rel="stylesheet" type="text/css" />
+    <!-- Custom box css -->
+    <link href="../Uplon-v1.4/assets/plugins/custombox/css/custombox.min.css" rel="stylesheet">
+    <!-- App CSS -->
+    <link href="../Uplon-v1.4/cisco-csr/assets/css/style2_old.css" rel="stylesheet" type="text/css" />
+    <link href="../Uplon-v1.4/demo_goodera/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- select2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+    <!--mapbox-->
+    <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
+    <!-- <script src="../Uplon-v1.4/ktc/js/justgage.js"></script> -->
+    <script src="//cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.4/all/gauge.min.js"></script>
+    <script src="//cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.4/radial/gauge.min.js"></script>
+    <script src="//cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.4/linear/gauge.min.js"></script>
+    <!-- /mapbox-->
+    <!--Gallery-->
+    <link rel="stylesheet" href="../Uplon-v1.4/assets/plugins/lightbox/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" type="text/css" href="../Uplon-v1.4/assets/plugins/slick-1.6.0/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../Uplon-v1.4/assets/plugins/slick-1.6.0/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Custom Stylesheet -->
+    <!-- <link href="../Uplon/emc/css/custom.css" rel="stylesheet" type="text/css" /> -->
+    <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    <!-- Modernizr js -->
+    <script src="../Uplon-v1.4/assets/js/modernizr.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+    <!-- <script type="text/javascript">
+    var app = angular.module('MyApp', [])
+    app.controller('MyController', function($scope) {
+        //This will hide the DIV by default.
+        $scope.IsHidden = true;
+        $scope.ShowHide = function() {
+            //If DIV is hidden it will be visible and vice versa.
+            $scope.IsHidden = $scope.IsHidden ? false : true;
+        }
+    });
+    </script> -->
+    <!--
+         Angular js
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+-->
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Modernizr js -->
+    <script src="../Uplon-v1.4/assets/js/modernizr.min.js"></script>
+    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
+    <style type="text/css">
+    .dataTables_scrollBody thead {
+        visibility: hidden;
+    }
+    </style>
+    <style type="text/css">
+    #container_donut {
+        position: relative;
+        width: 300;
+        height: 320;
+    }
+
+    #owl-demo .item img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    #chart41,
+    #chart42,
+    #chart43,
+    #chart44,
+    #chart45,
+    #chart46,
+    #chart47,
+    #chart48 {
+        width: 100%;
+        height: 100%;
+    }
+
+    #fm_img1,
+    #fm_img2,
+    #fm_img3,
+    #fm_img4,
+    #fm_img5,
+    #fm_img6,
+    #fm_img7,
+    #fm_img8 {
+        position: absolute;
+        bottom: 58%;
+        right: 32%;
+        width: 35%;
+        height: 27%;
+    }
+
+
+
+    .tabImg img {
+        padding: 5px;
+        border: 1px solid #eee;
+        height: auto;
+        width: 100%;
+    }
+    /* Mini Gallery*/
+
+    ul[id^="tab-container-"][id$="-nav"] {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul[id^="tab-container-"][id$="-nav"] li {
+        list-style: none;
+        float: left;
+        padding: 0;
+        margin: 0;
+        padding-right: 8px;
+        padding-bottom: 3px;
+    }
+
+    ul[id^="tab-container-"][id$="-nav"] li a img {
+        padding: 3px;
+        border: 1px solid #eee;
+        filter: alpha(opacity=50);
+        -moz-opacity: 0.5;
+        -khtml-opacity: 0.5;
+        opacity: 0.5;
+        height: 100px !important;
+        width: 100px !important;
+    }
+
+    ul[id^="tab-container-"][id$="-nav"] li a:hover img {
+        padding: 3px;
+        border: 1px solid #ccc;
+        filter: alpha(opacity=99);
+        -moz-opacity: 0.99;
+        -khtml-opacity: 0.99;
+        opacity: 0.99;
+    }
+
+    ul[id^="tab-container-"][id$="-nav"] li a .active img {
+        padding: 3px;
+        border: 1px solid #ccc;
+        filter: alpha(opacity=99);
+        -moz-opacity: 0.99;
+        -khtml-opacity: 0.99;
+        opacity: 0.99;
+    }
+
+    .tabImg img {
+        padding: 5px;
+        border: 1px solid #eee;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    a {
+        color: #007db8;
+    }
+
+    #sidebar-menu>ul>li>a.active {
+        color: #ffffff !important;
+        background-color: #ffefeb;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    #sidebar-menu ul li a i {
+        color: #373a3c;
+    }
+
+    #sidebar-menu ul li.has_sub a.active i {
+        color: #999;
+    }
+
+    #sidebar-menu ul li a.active span {
+        color: #999;
+    }
+
+    #sidebar-menu ul ul li.active a {
+        color: #002060;
+        font-weight: 200;
+    }
+
+    #sidebar-menu>ul>li>a>span {
+        color: black;
+    }
+
+    #sidebar-menu ul li a.active i {
+        color: whitesmoke;
+    }
+
+    .dream-title {
+        background-color: #002060 !important;
+    }
+
+    .text-green-goodera {
+        color: #3cc19f;
+    }
+
+    .text-red-goodera {
+        color: #ff5516;
+    }
+
+    .navbar-default {
+        background-color: white;
+    }
+
+    .navbar-nav>li>a,
+    .navbar-nav>li>a>img {
+        color: #001919;
+        background-color: transparent;
+    }
+
+    .navbar-nav>li>a:focus,
+    .navbar-nav>li>a:hover {
+        color: rgb(57, 125, 184);
+        background-color: transparent;
+    }
+
+    .navbar-nav>.active>a>img,
+    .navbar-nav>.active>a:focus>img,
+    .navbar-nav>.active>a:hover>img {
+        color: rgb(57, 125, 184);
+        background-color: transparent;
+    }
+
+    .navbar-nav>.active>a,
+    .navbar-nav>.active>a:focus,
+    .navbar-nav>.active>a:hover {
+        color: rgb(57, 125, 184);
+        background-color: transparent;
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 15px;
+        padding-bottom: 0px;
+    }
+
+    .footer {
+        right: 50px;
+        left: 27px;
+    }
+
+    .footer img {
+        top: 0px;
+    }
+
+    .c3-bars path {
+        shape-rendering: auto;
+    }
+
+    .progress {
+        height: 10px;
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 100px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    #curr {
+        font-size: 70%;
+    }
+
+    a {
+        color: #007db8;
+    }
+
+    #sidebar-menu>ul>li>a.active {
+        color: #ffffff !important;
+        background-color: #ffefeb;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    #sidebar-menu ul li a i {
+        color: #373a3c;
+    }
+
+    #sidebar-menu ul li.has_sub a.active i {
+        color: #999;
+    }
+
+    #sidebar-menu ul li a.active span {
+        color: #999;
+    }
+
+    #sidebar-menu ul ul li.active a {
+        color: #002060;
+        font-weight: 200;
+    }
+
+    #sidebar-menu>ul>li>a>span {
+        color: black;
+    }
+
+    #sidebar-menu ul li a.active i {
+        color: whitesmoke;
+    }
+
+    .dream-title {
+        background-color: #002060 !important;
+    }
+
+    .text-green-goodera {
+        color: #3cc19f;
+    }
+
+    .text-red-goodera {
+        color: #ff5516;
+    }
+
+    .navbar-fixed-top {
+        background-color: #ffffff;
+    }
+
+    body {
+        padding-top: 70px;
+
+
+    }
+
+    .navbar-default {
+        background-color: white;
+    }
+
+    .navbar-default .navbar-nav>li>a,
+    .navbar-default .navbar-nav>li>a {
+        color: #0b0a0a;
+        background-color: transparent;
+    }
+
+    .navbar-default .navbar-nav>.active>a,
+    .navbar-default .navbar-nav>.active>a:focus,
+    .navbar-default .navbar-nav>.active>a:hover {
+        color: rgb(57, 125, 184);
+        background-color: transparent;
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 15px;
+        padding-bottom: 0px;
+    }
+
+    .footer {
+        right: 50px;
+        left: 27px;
+    }
+
+    .footer img {
+        top: 0px;
+    }
+
+    .c3-bars path {
+        shape-rendering: auto;
+    }
+
+    .progress {
+        height: 10px;
+    }
+
+    a.morelink {
+        text-decoration: none;
+        outline: none;
+    }
+
+    .morecontent span {
+        display: none;
+    }
+
+    .carousel-control {
+        width: 5%;
+    }
+
+    .frame {
+        border-right: #000000 4px outset;
+        border-bottom: #000000 4px outset;
+        border-left: #b2b2b2 4px outset;
+        border-top: #b2b2b2 4px outset;
+    }
+
+    .myButton {
+        -moz-box-shadow: 0px 1px 0px 0px #f0f7fa;
+        -webkit-box-shadow: 0px 1px 0px 0px #f0f7fa;
+        box-shadow: 0px 1px 0px 0px #f0f7fa;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #33bdef), color-stop(1, #019ad2));
+        background: -moz-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+        background: -webkit-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+        background: -o-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+        background: -ms-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+        background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bdef', endColorstr='#019ad2', GradientType=0);
+        background-color: #33bdef;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        border: 1px solid #057fd0;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: Arial;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 6px 24px;
+        text-decoration: none;
+        text-shadow: 0px -1px 0px #5b6178;
+    }
+
+    .myButton:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #019ad2), color-stop(1, #33bdef));
+        background: -moz-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -webkit-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -o-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -ms-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#019ad2', endColorstr='#33bdef', GradientType=0);
+        background-color: #019ad2;
+    }
+
+    .myButton:active {
+        position: relative;
+        top: 1px;
+    }
+
+    .fixedContainer {
+        background-color: #ddd;
+        position: fixed;
+        padding: 2em;
+        left: 20%;
+        top: 0%;
+        transform: translateX(-50%);
+    }
+
+    .dataTables_filter,
+    .dataTables_info {
+        display: none;
+    }
+
+    div.tab {
+        float: right;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        border-radius: 15px;
+        width: 100%;
+        padding: 0px;
+    }
+    /* Style the buttons inside the tab */
+
+    div.tab button {
+        display: block;
+        background-color: inherit;
+        color: black;
+        padding: 22px 0px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+    /* Change background color of buttons on hover */
+
+    div.tab button:hover {
+        background-color: #ddd;
+    }
+    /* Create an active/current "tab button" class */
+
+    div.tab button.active {
+        background-color: #ccc;
+    }
+    /* Style the tab content */
+
+    .tabcontent {
+        padding: 0px 12px;
+        width: 100%;
+        border-left: none;
+        height: 300px;
+    }
+
+    .tab .active {
+        border-top: 2px solid;
+        border-top-color: #ccc;
+        border-bottom: 2px solid;
+        border-bottom-color: #ccc;
+        color: #2b3d51;
+    }
+
+    .tabImg img {
+        padding: 5px;
+        border: 1px solid #eee;
+        height: auto;
+        width: 100%;
+    }
+    /* Mini Gallery*/
+
+    ul[id^="tab-container-"][id$="-nav"] {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul[id^="tab-container-"][id$="-nav"] li {
+        list-style: none;
+        float: left;
+        padding: 0;
+        margin: 0;
+        padding-right: 8px;
+        padding-bottom: 3px;
+    }
+
+    ul[id^="tab-container-"][id$="-nav"] li a img {
+        padding: 3px;
+        border: 1px solid #eee;
+        filter: alpha(opacity=50);
+        -moz-opacity: 0.5;
+        -khtml-opacity: 0.5;
+        opacity: 0.5;
+        height: 100px !important;
+        width: 100px !important;
+    }
+
+    ul[id^="tab-container-"][id$="-nav"] li a:hover img {
+        padding: 3px;
+        border: 1px solid #ccc;
+        filter: alpha(opacity=99);
+        -moz-opacity: 0.99;
+        -khtml-opacity: 0.99;
+        opacity: 0.99;
+    }
+
+    ul[id^="tab-container-"][id$="-nav"] li a .active img {
+        padding: 3px;
+        border: 1px solid #ccc;
+        filter: alpha(opacity=99);
+        -moz-opacity: 0.99;
+        -khtml-opacity: 0.99;
+        opacity: 0.99;
+    }
+
+    .tabImg img {
+        padding: 5px;
+        border: 1px solid #eee;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    a {
+        color: #007db8;
+    }
+
+    #sidebar-menu>ul>li>a.active {
+        color: #ffffff !important;
+        background-color: #c9eaf9;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    #sidebar-menu ul li a i {
+        color: #373a3c;
+    }
+
+    #sidebar-menu ul li.has_sub a.active i {
+        color: #ff7a49;
+    }
+
+    #sidebar-menu ul li a.active span {
+        color: #ff7a49 !important;
+    }
+
+    #sidebar-menu ul ul li.active a {
+        color: #002060;
+        font-weight: 200;
+    }
+
+    #sidebar-menu>ul>li>a>span {
+        color: black;
+    }
+
+    #sidebar-menu ul li a.active i {
+        color: #397db8 !important;
+    }
+
+    .dream-title {
+        background-color: #002060 !important;
+    }
+
+    .text-green-goodera {
+        color: #3cc19f;
+    }
+
+    .text-red-goodera {
+        color: #ff5516;
+    }
+
+
+    .progress {
+        display: -ms-flexbox;
+        display: flex;
+        overflow: hidden;
+        font-size: .75rem;
+        line-height: 1rem;
+        text-align: center;
+        color: #ccc;
+        background-color: #ccc;
+    }
+
+    .progress-bar {
+        height: 1rem;
+        line-height: 1rem;
+        color: #000;
+        background-color: #000;
+        transition: width .6s ease;
+    }
+
+    .progress-bar-striped {
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+        background-size: 1rem 1rem;
+    }
+
+    .progress-bar-striped {
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+        background-size: 1rem 1rem;
+    }
+
+    .progress-bar-animated {
+        -webkit-animation: progress-bar-stripes 1s linear infinite;
+        animation: progress-bar-stripes 1s linear infinite;
+    }
+
+    .tilebox-one i {
+        font-size: 18px;
+    }
+
+    .btn-secondary {
+        color: #ffffff;
+        -moz-box-shadow: 0px 1px 0px 0px #f0f7fa;
+        -webkit-box-shadow: 0px 1px 0px 0px #f0f7fa;
+        box-shadow: 0px 1px 0px 0px #f0f7fa;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #33bdef), color-stop(1, #019ad2));
+        background: -moz-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+        background: -webkit-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+        background: -o-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+        background: -ms-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+        background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+        border-color: #4fa4da;
+    }
+
+    .btn-secondary:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #019ad2), color-stop(1, #33bdef));
+        background: -moz-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -webkit-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -o-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -ms-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+        background-color: #019ad2;
+        border-color: #4fa4da;
+    }
+
+    .btn-secondary:active {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #019ad2), color-stop(1, #33bdef));
+        background: -moz-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -webkit-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -o-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -ms-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+        background-color: #019ad2;
+        border-color: #4fa4da;
+    }
+
+    .btn-secondary:focus {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #019ad2), color-stop(1, #33bdef));
+        background: -moz-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -webkit-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -o-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -ms-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+        background-color: #019ad2;
+        border-color: #4fa4da;
+    }
+
+    .btn-secondary:click {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #019ad2), color-stop(1, #33bdef));
+        background: -moz-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -webkit-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -o-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -ms-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+        background-color: #019ad2;
+        border-color: #4fa4da;
+    }
+
+    .myButton {
+        -moz-box-shadow: 0px 1px 0px 0px #f0f7fa;
+        -webkit-box-shadow: 0px 1px 0px 0px #f0f7fa;
+        box-shadow: 0px 1px 0px 0px #f0f7fa;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #33bdef), color-stop(1, #019ad2));
+        background: -moz-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+        background: -webkit-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+        background: -o-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+        background: -ms-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+        background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bdef', endColorstr='#019ad2', GradientType=0);
+        background-color: #33bdef;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        border: 1px solid #057fd0;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: Arial;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 6px 24px;
+        text-decoration: none;
+        text-shadow: 0px -1px 0px #5b6178;
+    }
+
+    .myButton:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #019ad2), color-stop(1, #33bdef));
+        background: -moz-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -webkit-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -o-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: -ms-linear-gradient(top, #019ad2 5%, #33bdef 100%);
+        background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#019ad2', endColorstr='#33bdef', GradientType=0);
+        background-color: #019ad2;
+    }
+
+    .myButton:active {
+        position: relative;
+        top: 1px;
+    }
+
+    thead {
+        background-color: #3980c3;
+        color: white;
+    }
+
+    .dataTables_scrollBody thead {
+        visibility: hidden;
+        background-color: #3980c3;
+        color: white;
+    }
+
+    #chart_enrol:hover {
+        cursor: pointer;
+    }
+
+    .header-title {
+        font-family: "Rajdhani", sans-serif;
+        font-weight: 600;
+        font-size: 19px;
+        text-transform: uppercase;
+    }
+
+    .header-title1 {
+        font-family: "Rajdhani", sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    .button {
+        display: flex;
+        overflow: hidden;
+
+        margin: 10px;
+        padding: 12px 12px;
+
+        cursor: pointer;
+        user-select: none;
+        transition: all 150ms linear;
+        text-align: center;
+        white-space: nowrap;
+        text-decoration: none !important;
+        text-transform: none;
+        text-transform: capitalize;
+
+        color: #fff;
+        border: 0 none;
+        border-radius: 4px;
+
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.3;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 160px;
+
+        box-shadow: 2px 5px 10px var(--color-smoke);
+    }
+
+    .button.-dark {
+        color: var(--color-snow);
+        background: #00447C;
+
+        &:focus {
+            outline: 1px dotted white;
+            outline-offset: -4px;
+        }
+    }
+
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: grey;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+    }
+
+    #myBtn:hover {
+        background-color: #555;
+    }
+    /*.zoomin img { height: 290px; width: 615px; -webkit-transition: all 2s ease; -moz-transition: all 2s ease; -ms-transition: all 2s ease; transition: all 2s ease; }
+.zoomin img:hover { width: 740px; height: 400px; }*/
+    </style>
+</head>
+
+<body class="fixed-left" refresh="true" style="background-color:#f8f8f8">
+    <!-- Begin page -->
+    <div id="wrapper">
+        <!-- Navbar Right Menu -->
+        <div id="head">
+            <!-- Navbar Right Menu -->
+            <div class="container">
+                <nav class="navbar navbar-fixed-top" style="padding-left: 0px">
+                    <div class="container">
+                        <ul class="nav navbar-nav nav-append">
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <div class="dropdown">
+                                    <img src="https://dfk78syd1c72h.cloudfront.net/dashboard/ktc/img/user.png" style="height: 40px;width: 40px;">
+                                    <div class="dropdown-content">
+                                        <a href="/cisco-csr/logout">Sign Out</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="pull-right">
+                            <b>&emsp;Theme</b>
+                            <select class="filt" id="themeFilter" style="border: 0px;background-color: #f3f8fb; color:#004990;">
+                                <!-- <option value="all">All</option> -->
+                            </select>
+                        </div>
+                        <div class="pull-right">
+                            <b>&emsp;Grant Year</b>
+                            <select class="filt" id="yearFilter" style="border: 0px;background-color: #f3f8fb; color:#004990;">
+                                <option value="all">All</option>
+                            </select>
+                        </div>
+                        <div class="pull-right">
+                            <b>&emsp;Currency</b>
+                            <select class="filt" id="currencyFilter" style="border: 0px;background-color: #f3f8fb; color:#004990;">
+                                <option value="Dollars">USD</option>
+                                <option value="INR">INR</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 id="project_name">India > Financial</h4>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="pull-xs-right" style="padding-top: 8px;">
+                                <span style="font-family: 'Rajdhani', sans-serif;font-size:15px;">
+                                        <b>Last Updated: </b>
+                                    </span>
+                                <span style="font-family: 'Rajdhani', sans-serif;font-size:15px;" id="lastUpdated"></span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div>
+            <!-- Start content -->
+            <div class="content">
+                <div class="container">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div id="collapsable">
+                        <div class="row">
+                            <!-- <div class="col-md-8 m-b-20">
+                                <div class="card-box tilebox-one equal-height">
+                                    <h4 class="header-title m-t-0" style="margin-bottom: 3%;">FINANCIAL OVERVIEW</h4>
+                                    <div id="tab1_all" class="tab-pane fade in active">
+                                        <div id="chart1_all" class="popable" data-popbox="pop1">
+                                            <div class="progress" style="height: 60px;border-radius: 8px;">
+                                                <div class="progress-bar" id="disbursed" role="progressbar" style="background-color:#46B4F1;width:100%;height: 60px;"><span style="color: white;font-size: 17px"><br><br><span id="text_in_bar">100</span>% Disbursed</span>
+                                                </div>
+                                                <div class="progress-bar" id="allocated" role="progressbar" style="background-color:#ABACAE;width:0%;height: 60px;">
+                                                </div>
+                                            </div>
+                                            <div style="float: left;margin-top: 5px;margin-right: 10px;">
+                                                <svg style="height: 10px;width: 10px;float: left;">
+                                                    <rect width="10" height="10" style="fill:#46B4F1;stroke-width:3" />
+                                                </svg>
+                                            </div>
+                                            <div style="float: left;">
+                                                <p>Disbursed Amount</p>
+                                            </div>
+                                            <div class="pull-right">
+                                                <p id="disb"></p>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <div style="float: left;margin-top: 5px;margin-right: 10px;">
+                                                <svg style="height: 10px;width: 10px;float: left;">
+                                                    <rect width="10" height="10" style="fill:#ABACAE;stroke-width:3" />
+                                                </svg>
+                                            </div>
+                                            <div style="float: left;">
+                                                <p>Allocated Amount</p>
+                                            </div>
+                                            <div class="pull-right">
+                                                <p id="allo"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                </div>
+                            </div> -->
+                            <div class="col-md-8 m-b-20">
+                                <div class="card-box tilebox-one equal-height">
+                                    <h4 class="header-title m-t-0 chart-responsive">Financial Overview</h4>
+                                    <div class="chart" id="chartx"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 m-b-20">
+                                <div class="card-box tilebox-one equal-height">
+                                    <h4 class="header-title m-t-0 chart-responsive">CSR Grant Portfolio</h4>
+                                    <div class="chart" id="chart1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-b-20">
+                        <div class="col-md-12 m-b-20">
+                            <div class="card-box tilebox-one equal-height">
+                                <h4 class="header-title m-t-0 chart-responsive">Utilization By Portfolio</h4>
+                                <div class="col-md-4 m-b-20">
+                                    <div class="card-box tilebox-one equal-height" style="box-shadow: none;" >
+                                        <h5 style="font-size: 17px; margin-left: 55px;font-weight: bold;font-family: Rajdhani;">Economic Empowerment</h5>
+                                        <div class="chart" style="font-family: Rajdhani;font-weight: lighter;" id="chart_a"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 m-b-20">
+                                    <div class="card-box tilebox-one equal-height" style="box-shadow: none;">
+                                        <h5 style="font-size: 17px;font-weight: bold;margin-left: 1px;font-family: Rajdhani; margin-left: 110px;">Education</h5>
+                                        <div class="chart"  style="font-family: Rajdhani;font-weight: lighter;"  id="chart_b"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 m-b-20">
+                                    <div class="card-box tilebox-one equal-height" style="box-shadow: none;">
+                                        <h5 style="font-size: 17px;font-weight: bold;margin-left: 80px;font-family: Rajdhani;">Critical Human Needs</h5>
+                                        <div class="chart"  style="font-family: Rajdhani;font-weight: lighter;" id="chart_c"></div>
+                                    </div>
+                                </div>
+                            <div><center><i><h5 style="font-family: Rajdhani;"> *Percentage represents the amount utilized against the amount disbursed for the respective portfolio.</h5></i></center></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-b-20">
+                        <div class="col-md-12 m-b-20">
+                            <div class="card-box tilebox-one equal-height">
+                                <h4 class="header-title m-t-0 chart-responsive">Fund Utilisation Summary</h4>
+                                <div class="chart" id="chart2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="to_hide">
+                    <div class="row">
+                        <div class="col-md-12 m-b-20">
+                            <div class="card-box tilebox-one equal-height">
+                                <h4 class="header-title m-t-0 chart-responsive">Project Level Finances</h4>
+                                <table class="table table-hover table-bordered" style="width: 100%;" id="t1">
+                                    <!-- <thead class="thead-default">
+                                        <tr>
+                                            <th class="thead-custom"><center>Date of disbursement</center></th>
+                                            <th class="thead-custom"><center>Implementing agencies</center></th>
+                                            <th class="thead-custom"><center>Amount disbursed</center></th>
+                                            <th class="thead-custom"><center>Amount utilized</center></th>
+                                            <th class="thead-custom" style="width :40%"><center>Comments</center></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table1">
+                                    </tbody> -->
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 m-b-20">
+                            <div class="pull-right">
+                                <b>&emsp;NGO</b>
+                                <select class="filt" id="ngoFilter" style="border: 0px;background-color: #f3f8fb; color:#004990;">
+                                    <option value="Quest Alliance">Quest Alliance</option>
+                                    <option value="CII Foundation">CII Foundation</option>
+                                    <option value="Akshara">Akshara</option>
+                                    <option value="Pratham Books">Pratham Books</option>
+                                    <option value="SaveLife Foundation">SaveLife Foundation</option>
+                                    <option value="Youth For Seva">Youth For Seva</option>
+                                    <option value="Enable India">Enable India</option>
+                                    <option value="End Poverty">End Poverty</option>
+                                    <option value="FICCI">FICCI</option>
+                                    <option value="IAHV">IAHV</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 m-b-20">
+                            <div class="card-box tilebox-one equal-height">
+                                <h4 class="header-title m-t-0 chart-responsive">Project Budget Details</h4>
+                                <table class="table table-hover table-bordered" style="width: 100%;" id="t2">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th class="thead-custom">Component</th>
+                                            <th class="thead-custom">Category</th>
+                                            <th class="thead-custom">Annual Plan FY 2016 -17</th>
+                                            <th class="thead-custom">Amount Utilized</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table2">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- container -->
+        </div>
+        <!-- content -->
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <!-- End content-page -->
+    <!--   <div id="menu-footer" class="menu-footer text-uppercase" style="text-align: left; padding-top: 0px;"><img src="../Uplon-v1.4/demo_goodera/images/goodera-logo.png" style="height: 60px;"></div> -->
+    <br>
+    <br>
+    <footer class="footer text-right">
+        <img src="../Uplon-v1.4/demo_goodera/images/goodera-logo.png" style="height: 60px;">
+        <span class="pull-right" style="padding-top: 17px;">© 2018 Goodera. All rights reserved</span>
+    </footer>
+    </div>
+    <!-- END wrapper -->
+    <script>
+    var resizefunc = [];
+    </script>
+    <!-- jQuery  -->
+    <script src="../Uplon-v1.4/assets/js/jquery.min.js"></script>
+    <script src="../Uplon-v1.4/assets/js/tether.min.js"></script>
+    <!-- Tether for Bootstrap -->
+    <script src="../Uplon-v1.4/assets/js/bootstrap.min.js"></script>
+    <script src="../Uplon-v1.4/assets/js/detect.js"></script>
+    <script src="../Uplon-v1.4/assets/js/fastclick.js"></script>
+    <script src="../Uplon-v1.4/assets/js/jquery.blockUI.js"></script>
+    <script src="../Uplon-v1.4/assets/js/waves.js"></script>
+    <script src="../Uplon-v1.4/assets/js/jquery.nicescroll.js"></script>
+    <script src="../Uplon-v1.4/assets/js/jquery.scrollTo.min.js"></script>
+    <script src="../Uplon-v1.4/assets/js/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="../Uplon-v1.4/assets/plugins/slick-1.6.0/slick/slick.min.js"></script>
+    <!--MapBox-->
+    <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-image/v0.0.4/leaflet-image.js'></script>
+    <!-- jinqJs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jinq/1.5.9/jinqjs.min.js"></script>
+    <!-- Counter Up  -->
+    <script src="../Uplon-v1.4/assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
+    <script src="../Uplon-v1.4/assets/plugins/counterup/jquery.counterup.min.js"></script>
+    <!-- App js -->
+    <script src="../Uplon-v1.4/assets/js/jquery.core.js"></script>
+    <!-- <script src="../Uplon/light/assets/js/jquery.app.js"></script> -->
+    <script src="../Uplon-v1.4/assets/js/jquery.app.js"></script>
+    <!-- Modal-Effect -->
+    <script src="../Uplon-v1.4/assets/plugins/custombox/js/custombox.min.js"></script>
+    <script src="../Uplon-v1.4/assets/plugins/custombox/js/legacy.min.js"></script>
+    <!--MiniGallery-->
+    <script src="../Uplon-v1.4/assets/plugins/minigallery/yetii-min.js"></script>
+    <!--Date-->
+    <link href="../Uplon-v1.4/assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <!--C3 Chart-->
+    <script type="text/javascript" src="../Uplon-v1.4/assets/plugins/d3/d3.min.js"></script>
+    <script type="text/javascript" src="../Uplon-v1.4/assets/plugins/c3/c3.min.js"></script>
+    <!-- <script src="../Uplon/pace2/js/d3-funnel.js"></script> -->
+    <script src="../Uplon-v1.4/assets/pages/jquery.c3-chart.init.js"></script>
+    <script type="text/javascript" src="../Uplon-v1.4/assets/plugins/d3/d3.min.js"></script>
+    <script type="text/javascript" src="../Uplon-v1.4/assets/plugins/c3/c3.min.js"></script>
+    <script src="../Uplon-v1.4/assets/pages/jquery.c3-chart.init.js"></script>
+    <script src="https://rawgit.com/exupero/saveSvgAsPng/gh-pages/saveSvgAsPng.js"></script>
+    <script src="../Uplon-v1.4/HGS/assets/js/html2canvas.js"></script>
+    <script src="../Uplon/pace2/js/d3.v4.js"></script>
+    <script src="../Uplon/pace2/js/d3-funnel.js"></script>
+    <!--BlueImp Gallery-->
+    <script src="../Uplon-v1.4/assets/plugins/lightbox/js/blueimp-gallery.min.js"></script>
+    <!-- select2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+    <!-- Responsive examples -->
+    <script src="https://dashboardlibs.goodera.com/plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="https://dashboardlibs.goodera.com/plugins/datatables/responsive.bootstrap4.min.js"></script>
+    <!-- JS for HTML,Sidemenu etc -->
+    <script src="../AdminLTE-master/js/AdminLTE/grjNewP3Lib.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+    <link href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+    <!-- <script src="../AdminLTE-master/js/AdminLTE/p3functions.js"></script>
+        <script src="../AdminLTE-master/js/AdminLTE/p3directives.js"></script> -->
+    <script>
+    $('#myModal')
+        .on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget)
+            var title = button.data('title')
+            var plan = button.data('plan')
+            var desc = button.data('desc')
+
+            console.log(title)
+            $('.modal-title').text(title)
+            $('.modal-title-2').text(plan)
+            $('.modal-desc').text(desc)
+        })
+    </script>
+    <script src="../Uplon-v1.4/assets/js/p3LibCommons.js"></script>
+    <script src="../Uplon-v1.4/cisco-csr/assets/js/sidemenu.js"></script>
+    <script src="../Uplon-v1.4/cisco-csr/assets/js/pathseg_old.js"></script>
+    <script src="../Uplon-v1.4/cisco-csr/assets/js/financial_old.js"></script>
+    <script type="text/javascript">
+    $('.card-box').on('click', function() {
+        window.name = 'summary';
+    });
+
+    function collapse() {
+        var x = document.getElementById("collapsable");
+        if (x.style.display === "none") {
+            x.style.display = "inherit";
+        } else {
+            x.style.display = "none";
+        }
+        if ($("#text_val").text() == "Hide Program Overview") {
+            $("#text_val").html("Show Program Overview");
+        } else if ($("#text_val").text() == "Show Program Overview") {
+            $("#text_val").html("Hide Program Overview");
+        }
+    }
+    </script>
+</body>
